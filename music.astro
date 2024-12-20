@@ -1,0 +1,179 @@
+---
+import Welcome from "../components/Welcome.astro";
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Button from "../components/Button.astro";
+import Videomusik from "../components/Videomusik.astro";
+import Singlercard from "../components/Singlercard.astro";
+import Spotyfi from "../components/Spotyfi.astro";
+---
+
+<div></div>
+<Layout>
+  
+    <Header title="MUSIC" />
+
+    <div class="singler"></div>
+
+    <Videomusik />
+    <main>
+      <div class="container">
+        <Spotyfi />
+      </div>
+      
+      <div class="scroll">
+      <div class="videoer">
+        <div>
+          <a href="https://www.youtube.com/watch?v=cuM3jj36Q_o"><img class="videomusik1" src="/billeder/pigervideo.webp" alt="piger" /></a>
+          <h1>Piger</h1>
+        </div>
+        <div>
+          <a href="https://www.youtube.com/watch?v=k7MA5Rc1cjY"><img src="/billeder/opmedhåret.webp" alt="piger" /></a>
+          <h1>Op med håret</h1>
+        </div>
+        <div>
+          <a href="https://www.youtube.com/watch?v=l5rEs7AzX_w"><img class="videomusik1" src="/billeder/hjerneblødning.webp" alt="piger" /></a>
+          <h1>Hjerneblødning</h1>
+        </div>
+        <div>
+          <a href="https://www.youtube.com/watch?v=cuM3jj36Q_o"><img src="/billeder/pigervideo.webp" alt="piger" /></a>
+          <h1>Piger</h1>
+        </div>
+        <div>
+          <a href="https://www.youtube.com/watch?v=k7MA5Rc1cjY"><img class="videomusik1" src="/billeder/opmedhåret.webp" alt="piger" /></a>
+          <h1>Op med håret</h1>
+        </div>
+        <div>
+          <a href="https://www.youtube.com/watch?v=l5rEs7AzX_w"><img src="/billeder/hjerneblødning.webp" alt="piger" /></a>
+          <h1>Hjerneblødning</h1>
+        </div>
+      </div>
+   </div>
+      <a href="https://www.youtube.com/@YephaDK/videos"><p class="viewall">View all</p> </a>
+
+      <h1 class="h2singler">SINGLER</h1>
+      <Singlercard />
+      <div class="scroll">
+        <h1 class="h2desktop_text">NY MUSIK UDE SNART // NY MUSIK UDE SNART // NY MUSIK UDE SNART // NY MUSIK UDE SNART // NY MUSIK UDE SNART // NY MUSIK UDE SNART</h1>
+      </div>
+    </main>
+
+    <Footer />
+
+</Layout>
+  <style>
+    .arrow {
+      border: solid black;
+      border-width: 0 3px 3px 0;
+      display: inline-block;
+      padding: 3px;
+    }
+    .left {
+      transform: rotate(135deg);
+      -webkit-transform: rotate(135deg);
+    }
+    .scroll {
+      width: 100%;
+      overflow: hidden;
+    }
+    .h2desktop_text{
+      font-size: 50px;
+      color: #a52913;
+      animation: scroll-left 60s linear infinite;
+      display: inline-block;
+      white-space: nowrap;
+
+    }
+
+    .viewall {
+      font-family: "Lato", sans-serif;
+      color: black;
+      font-size: 30px;
+      text-align: right;
+      text-decoration: none;
+      padding: 50px;
+    }
+      .videomusik1 {
+      margin-top: 90px;
+    }
+
+
+    .videoer {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+     
+    }
+
+    .videoer {
+      animation: scroll-left 80s linear infinite;
+      display: flex;
+      gap: 20px;
+      align-content: baseline;
+    
+    }
+
+  
+    @keyframes scroll-left {
+      from {
+        transform: translateX(0%); /* Starter uden for skærmen til højre */
+      }
+      to {
+        transform: translateX(-50%); /* Flytter hele galleriet ud til venstre */
+      }
+    }
+
+    img {
+      height: auto;
+      width: 400px;
+    }
+
+    h1 {
+      text-align: center;
+      font-family: "Inter", serif;
+      font-style: normal;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      padding: 40px;
+    }
+
+    .p {
+      color: rgba(0, 0, 0, 0.3);
+      font-size: 40px;
+      font-weight: bolder;
+      font-family: "Inter", serif;
+      line-height: 20px;
+    }
+    .h2singler {
+      text-align: center;
+      font-family: "Inter", serif;
+      font-style: normal;
+      font-size: 64px;
+    }
+
+    @media (max-width: 1000px) {
+      .videoer {
+        display: block;
+        padding: 30px;
+         overflow: hidden;
+      }
+
+      .videoer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+
+      .videoer {
+        animation: scroll-left 80s linear infinite;
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 20px;
+        align-content: baseline;
+      }
+    }
+  </style>
+

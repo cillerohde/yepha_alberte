@@ -1,0 +1,154 @@
+---
+const { title } = Astro.props;
+---
+
+<header>
+  <link rel="icon" href="/billeder/sortlogo.svg" sizes="40x40" />
+  <a href="/" class="logo">{title}</a>
+  <nav class="menu">
+    <a href="/">HOME</a>
+    <a href="/music">MUSIC</a>
+    <a href="/acting">ACTING</a>
+    <a href="/#formis">BOOK</a>
+  </nav>
+
+  <!-- Burger-ikon til mobile enheder -->
+  <div class="burger">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</header>
+
+<style>
+  /* ---------------- Mobile-first styling ------------------  */
+
+  @media (max-width: 1024px) {
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      font-family: inter;
+    }
+
+    .logo {
+      font-size: 120px;
+      font-weight: bolder;
+      text-decoration: none;
+      color: rgba(0, 0, 0, 0.91);
+    }
+
+    .menu {
+      display: none; /* Skjul menuen på mobile enheder */
+      flex-direction: column;
+      position: absolute;
+      top: 0px;
+      right: 0;
+      bottom: 0px;
+      width: 100%;
+      background-color: #fff;
+      text-align: center;
+    }
+
+    .menu a {
+      text-decoration: none;
+      background-color: rgba(0, 0, 0, 0.91);
+      color: #fff;
+      font-size: 32px;
+      font-weight: bold;
+      padding: 30px 0;
+    }
+
+    /* Burger-ikon */
+    .burger {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height: 21px;
+      cursor: pointer;
+    }
+
+    .burger div {
+      height: 1.8px;
+      background-color: black;
+      border-radius: 25px;
+    }
+
+    /* Den øverste streg */
+    .burger div:nth-child(1) {
+      width: 100%; /* Længst */
+    }
+
+    /* Den midterste streg */
+    .burger div:nth-child(2) {
+      width: 70%; /* Mellem */
+      align-self: flex-end; /* Centrer denne */
+    }
+
+    /* Den nederste streg */
+    .burger div:nth-child(3) {
+      width: 50%; /* Kortest */
+      align-self: flex-end; /* Flyt denne mod højre */
+    }
+
+    /* Når menuen er åben på mobil */
+    .menu.active {
+      display: flex;
+    }
+    .logo {
+      font-size: 80px;
+    }
+  }
+
+  /* -------------- DET HER ER DESKTOP ---------------- */
+  @media (min-width: 1024px) {
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      /* padding: 10px 20px; */
+      font-family: inter;
+    }
+
+    .logo {
+      font-size: 210px;
+      font-weight: bold;
+      text-decoration: none;
+      color: rgba(0, 0, 0, 0.91);
+    }
+
+    .menu {
+      display: flex;
+      gap: 100px;
+      padding-right: 35px;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: black;
+      font-size: 20px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    .burger {
+      display: none;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const burger = document.querySelector(".burger");
+    const menu = document.querySelector(".menu");
+
+    // Funktion til at åbne/lukke menuen ved klik på burger-ikon
+    function toggleMenu() {
+      menu.classList.toggle("active");
+    }
+
+    // Event listener til burger-ikonet
+    burger.addEventListener("click", toggleMenu);
+  });
+</script>

@@ -1,0 +1,331 @@
+---
+import Welcome from "../components/Welcome.astro";
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Button from "../components/Button.astro";
+import Spotyfi from "../components/Spotyfi.astro";
+import FormComponent from "../components/FormComponent.astro";
+---
+
+<Layout>
+  <body>
+    <Header title="ACTING" />
+    <main>
+      <div class="actorhero1">
+        <img class="colum" src="/billeder/actingimgvenstre.webp" alt="billede1" />
+        <img class="colum" src="/billeder/actingimghøjre.webp" alt="billede2" />
+      </div>
+
+      <div class="container">
+        <Spotyfi />
+      </div>
+
+      <div>
+        <h1 class="overskrift">PROFIL</h1>
+        <p class="part1">Jeppe er en alsidig skuespiller med en solid baggrund i teknikker som han har trænet hos anerkendte undervisere som Thure Lindhardt og Chalotte Munk samt på William Esper Studio i New York med fokus på Meisner-teknik. Jeppe har erfaring fra improvisation og castingkurser med profiler som Jonas Elmer og Rie Hedegaard. Udover skuespil bringer han kreative kompetencer som musiker, tekstforfatter og performer.</p>
+      </div>
+
+      <div class="img2">
+        <img src="/billeder/acting1.webp" alt="billede3" />
+        <img src="/billeder/acting2.webp" alt="billede4" />
+      </div>
+
+      <h1 class="streg1">PROFIL INFO</h1>
+      <div class="part2">
+        <div class="faktabox">
+          <p class="liste">
+            Højde: <br />
+            Vægt: <br />
+            Skostørrelse: <br />
+            Tøjstørrelse: <br />
+            Playing age: <br />
+            Fødselsår: <br />
+            Hårfarve: <br />
+            Øjenfarve: <br />
+            Modersmål: <br />
+            Sprog, kendskab:<br />
+            Dialekter:<br />
+            Kørekort:
+          </p>
+          <p class="liste">
+            183cm <br />
+            85 kg <br />
+            43 <br />
+            L/Xl <br />
+            28 – 44år <br />
+            1983 <br />
+            Brunt/kort <br />
+            Blå/Grøn <br />
+            Dansk <br />
+            Engelsk <br />
+            Fynsk, jysk, sjællandsk <br />
+            Personbil, Motorcykel <br />
+          </p>
+        </div>
+        <img class="mobilimg1" src="/billeder/acting3.webp" alt="" />
+      </div>
+
+      <div class="streg-container">
+        <h1 class="streg2">FILM & TV</h1>
+      </div>
+      <div class="part3">
+        <div>
+          <ul>
+            Tidligere projekter
+            <li>Ørnen: En krimi-odyssé – 2006</li>
+            <li>Arthur og Maltazars hævn – Dubbing, 2009</li>
+          </ul>
+
+          <ul>
+            2016
+            <li>Anti – Spillefilm</li>
+            <li>Lillemand 2 – Sitcom, TV2 Zulu</li>
+          </ul>
+        </div>
+
+        <div>
+          <ul>
+            2017
+            <li>Jeg er William – Spillefilm</li>
+          </ul>
+
+          <ul>
+            2018
+            <li>Den som dræber – TV-serie</li>
+            <li>Hånd i hånd – TV-serie</li>
+          </ul>
+
+          <ul>
+            2019
+            <li>32 – YouSee-serie</li>
+          </ul>
+        </div>
+
+        <div>
+          <ul>
+            2020
+            <li>Alfa – TV2 Zulu-serie</li>
+            <li>Min fars krig – DR-serie</li>
+            <li>Den verden vi valgte – Kortfilm</li>
+            <li>Fugleflugten – Kortfilm</li>
+          </ul>
+
+          <ul>
+            2024
+            <li>Graverne – TV2-serie</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="img3">
+        <img src="/billeder/acting4.webp" alt="img1" />
+        <img src="/billeder/acting5.webp" alt="img2" />
+        <img src="/billeder/acting6.webp" alt="img3" />
+      </div>
+    </main>
+
+    <Footer />
+  </body>
+</Layout>
+
+<style>
+  .overskrift {
+    text-align: center;
+    font-family: "Inter", serif;
+    font-style: normal;
+  }
+  .part3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 kolonner */
+    gap: 20px; /* Afstand mellem kolonner */
+    padding: 20px; /* Indrykning omkring hele området */
+    line-height: 1.5;
+    margin: 30px;
+  }
+
+  /*--------DET HER ER INFO OG IMG TIL-------- */
+  .streg1 {
+    display: flex;
+    position: relative;
+    right: 0px;
+    display: inline-block;
+    border-bottom: 1px solid black;
+    padding-left: 170px;
+    font-family: "Inter", serif;
+    font-style: normal;
+  }
+
+  .streg-container {
+    text-align: center; /* Sørger for, at teksten er centreret */
+    position: relative; /* Nødvendig for at justere linjen */
+  }
+  .streg2 {
+    display: inline-block; /* Sørger for, at teksten er som et separat element */
+    position: relative;
+    font-family: "Inter", serif;
+    font-style: normal;
+  }
+  .streg2 {
+    display: flex;
+    border-bottom: 1px solid black;
+    width: 50%;
+    position: relative; /* Gør det muligt at flytte linjen med left */
+    left: 50%;
+  }
+
+  .part2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2px;
+    padding: 30px;
+  }
+
+  .liste {
+    line-height: 2em;
+  }
+
+  .faktabox {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 65px;
+  }
+  /*---------------------------*/
+
+  .part1 {
+    display: flex;
+    text-align: center;
+    line-height: 2em;
+    padding-left: 400px;
+    padding-right: 400px;
+  }
+
+  /*------- ALLE IMGER ------------*/
+  .img3 {
+    display: flex; /* Bruger flexbox */
+    flex-wrap: wrap; /* Tillader billederne at flytte sig til en ny linje */
+    justify-content: center;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .img2 {
+    display: flex; /* Gør containeren til en flexbox */
+    justify-content: center; /* Centrerer billederne horisontalt */
+    flex-direction: row; /* Sørger for, at billederne hopper ned på en ny linje, hvis der ikke er plads */
+    gap: 10px;
+    padding: 50px;
+  }
+  .img2 img {
+    width: 450px; /* Gør billederne mindre (ca. halvdelen af containerens bredde) */
+    max-width: 100%; /* Sørger for, at billederne ikke overstiger deres naturlige størrelse */
+    height: auto;
+  }
+  .actorhero1 {
+    display: flex; /* Gør containeren til en flexbox */
+    justify-content: center; /* Centrerer billederne horisontalt */
+    flex-direction: row; /* Sørger for, at billederne hopper ned på en ny linje, hvis der ikke er plads */
+  }
+  .actorhero1 img {
+    width: 100%; /* Gør billederne mindre (ca. halvdelen af containerens bredde) */
+    max-width: 100%; /* Sørger for, at billederne ikke overstiger deres naturlige størrelse */
+    height: auto;
+  }
+  /*------------------------------*/
+
+  .img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .spotify {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 40px;
+  }
+
+  .p {
+    color: rgba(0, 0, 0, 0.3);
+    font-size: 40px;
+    font-weight: bolder;
+    font-family: "Inter", serif;
+    line-height: 20px;
+  }
+
+  /* MOBILE */
+  @media (max-width: 1024px) {
+    .img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .part1 {
+      display: flex;
+      text-align: center;
+      line-height: 2em;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .part2 {
+      display: flex; /* Bruger flexbox */
+      flex-wrap: wrap; /* Tillader billederne at flytte sig til en ny linje */
+      justify-content: center;
+      flex-direction: row;
+      gap: 20px;
+    }
+
+    .part2 img {
+      width: 340px;
+    }
+    .liste {
+      margin: 50px;
+    }
+
+    .iactorhero1 img {
+      width: 100%; /* Gør billederne fulde bredde af containeren */
+    }
+
+    .img2 {
+      display: flex;
+      flex-direction: row; /* Align items in a row */
+      justify-content: center; /* Center items horizontally */
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 40px;
+    }
+    .img1 {
+      display: flex; /* Bruger flexbox */
+      flex-wrap: wrap; /* Tillader billederne at flytte sig til en ny linje */
+      justify-content: center;
+      flex-direction: row;
+      gap: 20px;
+    }
+    .img3 {
+      display: flex; /* Bruger flexbox */
+      flex-wrap: wrap; /* Tillader billederne at flytte sig til en ny linje */
+      justify-content: center;
+      flex-direction: row;
+      gap: 20px;
+    }
+
+    .img2 img {
+      width: 80%; /* Gør billederne mindre (ca. halvdelen af containerens bredde) */
+      max-width: 100%; /* Sørger for, at billederne ikke overstiger deres naturlige størrelse */
+      height: auto;
+    }
+
+    .part3 {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr); /* 3 kolonner */
+      line-height: 1.5;
+    }
+  }
+</style>

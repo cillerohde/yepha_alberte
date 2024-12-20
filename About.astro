@@ -1,0 +1,90 @@
+<div id="aboutlink">
+  <div class="about">
+    <div>
+      <h1 class="streg1">ABOUT</h1>
+      <p class="tekstabout">Yepha har sat sit præg på den danske musikscene med en stil, der balancerer skarpe tekster og melodiske hooks. Fra Ufo Yepha-dagene til solokarrieren har han leveret tracks som "Det Stikker Helt Af" og "Ik Gør det," der stadig holder. Hans musik er en blanding af rå energi og catchy vibes, der rammer bredt. Med en lyd, der går sin egen vej, har Yepha inspireret både fans og nye kunstnere.</p>
+    </div>
+    <div class="drejende-billede">
+      <img src="billeder/merch.svg" alt="Drejende Billede" class="drejende-billede" />
+    </div>
+  </div>
+
+  <style>
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-content: center;
+      gap: 200px;
+      padding-top: 150px;
+      padding-bottom: 150px;
+    }
+
+    .tekstabout {
+      display: flex;
+      text-align: center;
+      margin-left: 100px;
+    }
+    .streg1 {
+      display: flex;
+      text-align: center;
+      font-family: "Inter", serif;
+      display: flex;
+      display: inline-block;
+      border-bottom: 1px solid black;
+      padding-left: 350px;
+    }
+
+    .container {
+      perspective: 1000px; /* Giver en 3D-effekt */
+    }
+
+    .drejende-billede {
+      width: 300px; /* Sæt bredden på billedet */
+      animation: drej 10s linear infinite; /* Animationen */
+    }
+
+    @keyframes drej {
+      from {
+        transform: rotate(0deg); /* Startposition */
+      }
+      to {
+        transform: rotate(360deg); /* Slutposition */
+      }
+    }
+
+    @media (max-width: 1000px) {
+      .about {
+        display: block;
+        height: auto;
+      }
+
+      .tekstabout {
+        display: grid;
+        text-align: center;
+        display: flex;
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        margin: 39px;
+      }
+      img {
+        width: 100%; /* Responsive image */
+        height: auto; /* Maintain aspect ratio */
+        display: block; /* Remove bottom space */
+      }
+      .drejende-billede {
+        display: grid;
+        justify-content: center; /* Center horizontally */
+        align-items: center;
+        margin: 60px;
+      }
+
+      .streg1 {
+        display: flex;
+        text-align: center;
+        /* margin: 30px; */
+        padding: 0px;
+        margin-left: 172px;
+      }
+    }
+  </style>
+</div>

@@ -1,0 +1,162 @@
+---
+
+---
+
+<footer>
+  <div class="container1">
+    <a href="/">
+      <img src="/billeder/sortlogo.svg" alt="logo" />
+    </a>
+  </div>
+
+  <div class="nav_container">
+    <!-- Ikoner og knap i én række -->
+
+    <div class="icon_button_row">
+      <a href="https://www.tiktok.com/@_yepha" target="_blank">
+        <img src="/billeder/tiktok.svg" alt="TikTok" />
+      </a>
+      <a href="https://www.instagram.com/__yepha/?hl=da" target="_blank">
+        <img src="/billeder/instagram.svg" alt="Instagram" />
+      </a>
+      <a href="https://open.spotify.com/artist/5asGLnsKzGu0vUCRFSjibL" target="_blank">
+        <img src="/billeder/spotyfi.svg" alt="Spotify" />
+      </a>
+      <a href="/#formis">
+        <button>BOOK HER</button>
+      </a>
+    </div>
+
+    <!-- Menu (teksten) -->
+    <nav class="menu">
+      <a href="/">NYHEDSBREV</a>
+      <a href="/#aboutlink">ABOUT</a>
+    </nav>
+  </div>
+</footer>
+
+<style>
+  /*------------ DET HER ER MOBIL------------ */
+  @media (max-width: 1024px) {
+    footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .container1 {
+      margin-bottom: 20px; /* Placér logoet øverst */
+    }
+
+    .nav_container {
+      display: flex;
+      flex-direction: column; /* Lodret layout */
+      align-items: center;
+      gap: 20px;
+    }
+
+    .icon_button_row {
+      display: flex; /* Ikoner og knap i én række */
+      gap: 15px;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .menu {
+      display: flex;
+      font-family: "Lato", sans-serif;
+      font-style: normal;
+      gap: 15px; /* Plads mellem links */
+      justify-content: center;
+      flex-wrap: nowrap; /* Ingen linjebrud */
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: black;
+      font-size: 18px;
+      text-transform: uppercase;
+    }
+
+    /* Knappen */
+    button {
+      padding: 10px 30px;
+      font-size: 18px;
+      font-weight: bold;
+      background-color: #000000;
+      color: white;
+      border: none;
+      border-radius: 35px;
+    }
+
+    /* Ikoner */
+    .icon_button_row img {
+      width: 30px;
+      height: auto;
+    }
+  }
+
+  /*------------ DET HER ER DESKTOP------------ */
+  @media (min-width: 1024px) {
+    footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px;
+    }
+
+    .container1 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+      width: auto;
+    }
+
+    .nav_container {
+      display: flex; /* Bevar oprindeligt layout */
+      align-items: center;
+      justify-content: space-evenly;
+      width: 100%;
+      padding: 0 40px;
+    }
+
+    .icon_button_row {
+      display: flex; /* Ikoner og knap i én række */
+      gap: 100px;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .menu {
+      font-family: "Lato", sans-serif;
+      font-style: normal;
+      display: flex;
+      gap: 100px;
+      padding-right: 35px;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: black;
+      font-size: 30px;
+      text-transform: uppercase;
+    }
+
+    button {
+      padding: 20px 40px;
+      font-size: 25px;
+      font-weight: bold;
+      background-color: #000000;
+      color: white;
+      border: none;
+      border-radius: 35px;
+    }
+
+    .icon_button_row img {
+      height: auto;
+    }
+  }
+</style>

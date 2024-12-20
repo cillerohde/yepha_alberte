@@ -1,0 +1,134 @@
+---
+import Button from "../components/Button.astro";
+---
+
+<style>
+  p {
+    color: rgba(0, 0, 0, 0.3);
+    font-size: 14px;
+    font-weight: bolder;
+    font-family: "Inter", serif;
+    line-height: 20px;
+    text-decoration: none;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    /* padding: 20px; */
+  }
+
+  .special-component {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    text-decoration: none;
+  }
+
+  h1 {
+    text-align: center;
+    color: black;
+    font-weight: bolder;
+    font-family: "Inter", serif;
+    text-decoration: none;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+    font-family: "Lato", sans-serif;
+    font-style: normal;
+    font-size: 20px;
+    text-decoration: none;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    text-decoration: none;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  select {
+    width: 100%;
+    padding: 10px;
+    border: none; /* Remove border */
+    border-bottom: 2px solid black; /* Add underline */
+    outline: none; /* Remove outline */
+    text-decoration: none;
+  }
+  button {
+    padding: 20px 40px;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: #6c0000;
+    color: white;
+    border: none;
+    border-radius: 35px;
+    text-align: center;
+    display: flex;
+    justify-content: center; /* Aligns horizontally */
+    align-items: center; /* Aligns vertically */
+  }
+  .form_botton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  @media (max-width: 1000px) {
+    .form-group {
+      margin-bottom: 15px;
+      font-family: "Lato", sans-serif;
+      font-style: normal;
+      font-size: 10px;
+      text-decoration: none;
+      border: none; /* Remove border */
+      outline: none; /* Remove outline */
+    }
+  }
+</style>
+
+
+  <div class="special-component" id="formis">
+    <h1>BOOK HER</h1>
+    <p>Udfyld formularen nedenfor eller send en mail til mig på kontakt@jeppewahlstrom.dk</p>
+    <form action="#" method="post">
+      <div class="form-group">
+        <label for="name">FIRST NAME:</label>
+        <input type="text" id="name" name="name" required />
+      </div>
+      <div class="form-group">
+        <label for="phone">LAST NAME:</label>
+        <input type="tel" id="phone" name="phone" required />
+      </div>
+      <div class="form-group">
+        <label for="email">E-MAIL:</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+
+      <div class="form-group">
+        <label for="email">YOUR MESSAGE:</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+      
+ <div class="form_botton">
+            <a href="/#formis">
+        <button>SEND</button>
+      </a>
+ </div>
+  
+    </form>
+  </div>
+
+
+<script>
+  const toggleFormBtn = document.getElementById("toggleFormBtn");
+  const formContainer = document.getElementById("formContainer");
+
+  toggleFormBtn.addEventListener("click", () => {
+    formContainer.classList.toggle("active");
+  });
+</script>

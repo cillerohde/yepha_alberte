@@ -1,0 +1,57 @@
+---
+//@ts-nocheck
+import Layout from "../layouts/Layout.astro";
+
+const singler = await fetch("https://gmrqdsphowntllgdewkq.supabase.co/rest/v1/yepha_singles", {
+  method: "GET",
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdtcnFkc3Bob3dudGxsZ2Rld2txIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzM3Mzc0NTksImV4cCI6MjA0OTMxMzQ1OX0.HHGha3yx6RNf9AkkQsBICs0b4qpwkOQ2cSO0BOAGxQ8",
+  },
+}).then((res) => res.json());
+console.log(singler);
+---
+
+<Layout>
+
+        <div class="albumcovers">
+  {
+    singler.map((single) => {
+      return (
+          <div class="flex-col">
+            <a href={single.link_url}>
+              <div class="img">
+                <img src={`/billeder/${single.image_url}`} alt="billede" />
+                <h2>{single.overskrift}</h2>
+                <p>{single.underoverskrift}</p>
+              </div>
+            </a>
+          </div>
+      );
+    })
+  }
+        </div>
+
+</Layout>
+
+<style>
+  img {
+    width: 200px;
+  }
+
+a {
+text-decoration: none;
+color: black;
+font-size: 15px;
+}
+
+  .albumcovers {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 30px;
+    font-size: 10px;
+    font-family: "Inter", serif;
+    font-style: normal;
+    text-align: center;
+  }
+</style>

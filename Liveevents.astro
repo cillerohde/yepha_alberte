@@ -1,0 +1,67 @@
+<h1 class="h2desktop">LIVE EVENTS</h1>
+
+<div class="liveevents">
+  <div class="pdesktop">
+    <div>
+      <p class="venstre-tekst">01 mar 2025 YEPHA // HORSENS NY TEATER <a href="https://www.ticketmaster.dk/category/musik-billetter/10001" class="billetter">BILLETTER</a></p>
+      <p class="venstre-tekst">07 mar 2025 YEPHA // AMAGER BIO<a href="https://www.ticketmaster.dk/category/musik-billetter/10001" class="billetter">BILLETTER</a></p>
+      <p class="venstre-tekst">12 mar 2025 YEPHA // ROSKILDE HANDI-FESTIVAL<a href="https://www.ticketmaster.dk/category/musik-billetter/10001" class="billetter">BILLETTER</a></p>
+      <p class="venstre-tekst">14 mar 2025 YEPHA // PORTALEN <a href="https://www.ticketmaster.dk/category/musik-billetter/10001" class="billetter">BILLETTER</a></p>
+      <p class="venstre-tekst">15 mar 2025 YEPHA // VENDELBOHUS <a href="https://www.ticketmaster.dk/category/musik-billetter/10001" class="billetter">BILLETTER</a></p>
+      <p class="venstre-tekst">21 mar 2025 YEPHA // TOBAKSGAARDEN <a href="https://www.ticketmaster.dk/category/musik-billetter/10001" class="billetter">BILLETTER</a></p>
+    </div>
+  </div>
+</div>
+
+
+<style>
+  .pdesktop,
+  .liveevents {
+    display: flex;
+    justify-content: center;
+  }
+
+  p {
+  }
+  .venstre-tekst {
+    text-indent: 0px;
+    border-bottom: 1px solid black;
+    padding-right: 20px;
+    white-space: nowrap; 
+  }
+  .billetter {
+    float: right;
+    padding-left: 150px;
+     text-decoration: none;
+     color: black;
+
+  }
+  .h2desktop {
+    display: flex;
+    justify-content: center;
+    font-family: "Inter", serif;
+    text-align: center;
+  }
+
+  @media (max-width: 1000px) {
+    .liveevents,
+    .pdesktop {
+      padding: 20px;
+      font-size: 10px;
+      align-content: center;
+    }
+
+    .venstre-tekst {
+      text-indent: 0px;
+      border-bottom: 1px solid black;
+      padding-right: 20px;
+      font-size: 8px;
+    }
+    .h2desktop {
+      display: flex;
+      justify-content: center;
+      font-family: "Inter", serif;
+      text-align: center;
+    }
+  }
+</style>
